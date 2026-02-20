@@ -3,22 +3,22 @@
   <defs>
     <!-- Fine coordinate grid -->
     <pattern id="gf" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40,0 L0,0 0,40" fill="none" stroke="#9ca3af" stroke-width="0.3"/>
+      <path d="M40,0 L0,0 0,40" fill="none" stroke="#9ca3af" stroke-width="0.5"/>
     </pattern>
     <!-- Major coordinate grid -->
     <pattern id="gm" width="200" height="200" patternUnits="userSpaceOnUse">
-      <path d="M200,0 L0,0 0,200" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
+      <path d="M200,0 L0,0 0,200" fill="none" stroke="#8b1d1d" stroke-width="0.8"/>
     </pattern>
     <!-- Peru fill gradient (W coast → E Amazon) -->
     <linearGradient id="pf" x1="0" y1="0" x2="1" y2="0.5">
-      <stop offset="0%" stop-color="#8b1d1d" stop-opacity="0.04"/>
-      <stop offset="40%" stop-color="#8b1d1d" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#8b1d1d" stop-opacity="0.02"/>
+      <stop offset="0%" stop-color="#8b1d1d" stop-opacity="0.08"/>
+      <stop offset="40%" stop-color="#8b1d1d" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#8b1d1d" stop-opacity="0.05"/>
     </linearGradient>
     <!-- Center content readability fade -->
-    <radialGradient id="cf" cx="50%" cy="50%" r="48%" fx="50%" fy="50%">
-      <stop offset="0%" stop-color="#f3f4f6" stop-opacity="1"/>
-      <stop offset="65%" stop-color="#f3f4f6" stop-opacity="0.88"/>
+    <radialGradient id="cf" cx="50%" cy="50%" r="42%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f3f4f6" stop-opacity="0.92"/>
+      <stop offset="60%" stop-color="#f3f4f6" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#f3f4f6" stop-opacity="0"/>
     </radialGradient>
     <!-- Edge vignette -->
@@ -41,13 +41,13 @@
   <rect width="1920" height="1080" fill="#f3f4f6"/>
 
   <!-- ===== FINE GRID ===== -->
-  <rect width="1920" height="1080" fill="url(#gf)" opacity="0.35"/>
+  <rect width="1920" height="1080" fill="url(#gf)" opacity="0.55"/>
 
   <!-- ===== MAJOR GRID ===== -->
-  <rect width="1920" height="1080" fill="url(#gm)" opacity="0.12"/>
+  <rect width="1920" height="1080" fill="url(#gm)" opacity="0.22"/>
 
   <!-- ===== BACKGROUND CONTOUR LINES ===== -->
-  <g fill="none" stroke="#8b1d1d" stroke-width="0.7" opacity="0.05">
+  <g fill="none" stroke="#8b1d1d" stroke-width="1" opacity="0.09">
     <path d="M-50,60 C300,35 600,95 960,65 S1400,105 1970,45"/>
     <path d="M-50,140 C280,115 580,175 960,145 S1420,185 1970,125"/>
     <path d="M-50,220 C320,190 620,255 960,225 S1440,265 1970,205"/>
@@ -67,10 +67,10 @@
   <g>
     <!-- Country shape -->
     <path d="M784,358 C800,355 815,360 820,378 C828,384 838,385 848,386 C858,368 868,346 876,344 C898,308 922,275 946,263 C968,278 986,288 1002,296 C1040,332 1072,356 1100,378 C1100,436 1100,482 1100,526 C1112,546 1122,558 1128,568 C1134,588 1136,600 1136,610 C1134,638 1130,652 1128,666 C1124,710 1122,736 1120,758 C1114,768 1110,772 1106,772 C1096,768 1082,762 1061,753 C1050,744 1044,738 1044,736 C1018,716 1002,704 988,694 C968,680 956,672 946,666 C938,650 934,644 932,638 C918,618 910,606 904,596 C892,574 886,564 882,554 C872,532 866,520 862,512 C848,490 840,478 834,470 C824,454 818,448 814,442 C804,422 796,410 792,400 C786,380 784,368 784,358Z"
-      fill="url(#pf)" stroke="#8b1d1d" stroke-width="1.2" stroke-opacity="0.18"/>
+      fill="url(#pf)" stroke="#8b1d1d" stroke-width="1.8" stroke-opacity="0.30"/>
 
     <!-- Andes contour lines (N-S through western Peru) -->
-    <g fill="none" stroke="#8b1d1d" stroke-width="0.6" opacity="0.10">
+    <g fill="none" stroke="#8b1d1d" stroke-width="0.8" opacity="0.18">
       <path d="M808,370 C812,420 820,480 835,540 C850,600 870,660 910,730"/>
       <path d="M820,360 C825,410 835,470 850,530 C865,590 885,650 925,720"/>
       <path d="M835,350 C842,400 852,460 868,520 C884,580 905,640 945,710"/>
@@ -82,14 +82,14 @@
     </g>
 
     <!-- River suggestions (subtle gray dashes) -->
-    <g fill="none" stroke="#6b7280" stroke-width="0.5" opacity="0.07" stroke-dasharray="4,3">
+    <g fill="none" stroke="#6b7280" stroke-width="0.7" opacity="0.13" stroke-dasharray="4,3">
       <path d="M870,340 C890,350 920,365 960,385 C1000,405 1040,410 1080,425"/>
       <path d="M960,660 C970,620 990,580 1010,540 C1030,500 1060,460 1090,440"/>
       <path d="M1080,425 C1088,430 1092,435 1090,440"/>
     </g>
 
     <!-- City markers -->
-    <g fill="#8b1d1d" opacity="0.14">
+    <g fill="#8b1d1d" opacity="0.25">
       <circle cx="904" cy="596" r="3.5"/>
       <text x="914" y="594" font-family="Arial,sans-serif" font-size="7.5" font-weight="600">Lima</text>
       <circle cx="1050" cy="670" r="2.5"/>
@@ -105,7 +105,7 @@
     </g>
 
     <!-- Cadastral grid patches near Lima (VES, Chorrillos, SJM) -->
-    <g fill="none" stroke="#8b1d1d" stroke-width="0.3" opacity="0.06">
+    <g fill="none" stroke="#8b1d1d" stroke-width="0.4" opacity="0.12">
       <rect x="889" y="584" width="8" height="6"/><rect x="897" y="584" width="8" height="6"/>
       <rect x="905" y="584" width="8" height="6"/><rect x="889" y="590" width="8" height="6"/>
       <rect x="897" y="590" width="8" height="6"/><rect x="905" y="590" width="8" height="6"/>
@@ -117,11 +117,11 @@
     </g>
 
     <!-- Lake Titicaca hint -->
-    <ellipse cx="1128" cy="690" rx="10" ry="6" fill="#6b7280" opacity="0.05" stroke="#6b7280" stroke-width="0.4" stroke-opacity="0.08"/>
+    <ellipse cx="1128" cy="690" rx="10" ry="6" fill="#6b7280" opacity="0.10" stroke="#6b7280" stroke-width="0.6" stroke-opacity="0.14"/>
   </g>
 
   <!-- ===== SURVEY CROSSHAIR MARKERS ===== -->
-  <g opacity="0.16">
+  <g opacity="0.28">
     <use href="#ch" x="194" y="194" width="12" height="12"/>
     <use href="#ch" x="194" y="394" width="12" height="12"/>
     <use href="#ch" x="194" y="594" width="12" height="12"/>
@@ -150,7 +150,7 @@
   </g>
 
   <!-- ===== COORDINATE LABELS ===== -->
-  <g font-family="'Courier New',monospace" font-size="8" fill="#8b1d1d" opacity="0.07">
+  <g font-family="'Courier New',monospace" font-size="8" fill="#8b1d1d" opacity="0.14">
     <!-- Top edge -->
     <text x="200" y="14" text-anchor="middle">82°W</text>
     <text x="400" y="14" text-anchor="middle">80°W</text>
@@ -186,7 +186,7 @@
   </g>
 
   <!-- ===== COMPASS ROSE ===== -->
-  <g transform="translate(1780,120)" opacity="0.14">
+  <g transform="translate(1780,120)" opacity="0.25">
     <circle r="36" fill="none" stroke="#8b1d1d" stroke-width="0.8"/>
     <circle r="30" fill="none" stroke="#8b1d1d" stroke-width="0.4"/>
     <circle r="2" fill="#8b1d1d" opacity="0.5"/>
@@ -211,7 +211,7 @@
   </g>
 
   <!-- ===== TITLE BLOCK (cartographic legend) ===== -->
-  <g transform="translate(1630,940)" opacity="0.09">
+  <g transform="translate(1630,940)" opacity="0.18">
     <rect width="255" height="90" fill="#f3f4f6" stroke="#8b1d1d" stroke-width="0.8" rx="2"/>
     <line x1="0" y1="26" x2="255" y2="26" stroke="#8b1d1d" stroke-width="0.4"/>
     <line x1="0" y1="52" x2="255" y2="52" stroke="#8b1d1d" stroke-width="0.4"/>
@@ -223,7 +223,7 @@
   </g>
 
   <!-- ===== SCALE BAR ===== -->
-  <g transform="translate(1650,1045)" opacity="0.09">
+  <g transform="translate(1650,1045)" opacity="0.18">
     <rect x="0" y="0" width="50" height="5" fill="#8b1d1d"/>
     <rect x="50" y="0" width="50" height="5" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
     <rect x="100" y="0" width="50" height="5" fill="#8b1d1d"/>

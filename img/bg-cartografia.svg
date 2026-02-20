@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Fine coordinate grid -->
+    <pattern id="gf" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40,0 L0,0 0,40" fill="none" stroke="#9ca3af" stroke-width="0.3"/>
+    </pattern>
+    <!-- Major coordinate grid -->
+    <pattern id="gm" width="200" height="200" patternUnits="userSpaceOnUse">
+      <path d="M200,0 L0,0 0,200" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
+    </pattern>
+    <!-- Peru fill gradient (W coast → E Amazon) -->
+    <linearGradient id="pf" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#8b1d1d" stop-opacity="0.04"/>
+      <stop offset="40%" stop-color="#8b1d1d" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8b1d1d" stop-opacity="0.02"/>
+    </linearGradient>
+    <!-- Center content readability fade -->
+    <radialGradient id="cf" cx="50%" cy="50%" r="48%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f3f4f6" stop-opacity="1"/>
+      <stop offset="65%" stop-color="#f3f4f6" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#f3f4f6" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Edge vignette -->
+    <radialGradient id="ev" cx="50%" cy="50%" r="72%">
+      <stop offset="0%" stop-color="#f3f4f6" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#f3f4f6" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f3f4f6" stop-opacity="0.5"/>
+    </radialGradient>
+    <!-- Crosshair marker -->
+    <symbol id="ch" viewBox="-8 -8 16 16">
+      <circle r="3" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
+      <line x1="-7" y1="0" x2="-3.5" y2="0" stroke="#8b1d1d" stroke-width="0.4"/>
+      <line x1="3.5" y1="0" x2="7" y2="0" stroke="#8b1d1d" stroke-width="0.4"/>
+      <line x1="0" y1="-7" x2="0" y2="-3.5" stroke="#8b1d1d" stroke-width="0.4"/>
+      <line x1="0" y1="3.5" x2="0" y2="7" stroke="#8b1d1d" stroke-width="0.4"/>
+    </symbol>
+  </defs>
+
+  <!-- ===== BASE ===== -->
+  <rect width="1920" height="1080" fill="#f3f4f6"/>
+
+  <!-- ===== FINE GRID ===== -->
+  <rect width="1920" height="1080" fill="url(#gf)" opacity="0.35"/>
+
+  <!-- ===== MAJOR GRID ===== -->
+  <rect width="1920" height="1080" fill="url(#gm)" opacity="0.12"/>
+
+  <!-- ===== BACKGROUND CONTOUR LINES ===== -->
+  <g fill="none" stroke="#8b1d1d" stroke-width="0.7" opacity="0.05">
+    <path d="M-50,60 C300,35 600,95 960,65 S1400,105 1970,45"/>
+    <path d="M-50,140 C280,115 580,175 960,145 S1420,185 1970,125"/>
+    <path d="M-50,220 C320,190 620,255 960,225 S1440,265 1970,205"/>
+    <path d="M-50,300 C340,265 640,335 960,305 S1460,345 1970,285"/>
+    <path d="M-50,380 C360,340 660,415 960,385 S1480,425 1970,365"/>
+    <path d="M-50,460 C380,420 680,495 960,465 S1500,505 1970,445"/>
+    <path d="M-50,540 C400,500 700,575 960,545 S1520,585 1970,525"/>
+    <path d="M-50,620 C420,580 720,655 960,625 S1540,665 1970,605"/>
+    <path d="M-50,700 C440,660 740,735 960,705 S1560,745 1970,685"/>
+    <path d="M-50,780 C460,740 760,815 960,785 S1580,825 1970,765"/>
+    <path d="M-50,860 C480,820 780,895 960,865 S1600,905 1970,845"/>
+    <path d="M-50,940 C500,900 800,975 960,945 S1620,985 1970,925"/>
+    <path d="M-50,1020 C520,980 820,1055 960,1025 S1640,1065 1970,1005"/>
+  </g>
+
+  <!-- ===== PERU OUTLINE ===== -->
+  <g>
+    <!-- Country shape -->
+    <path d="M784,358 C800,355 815,360 820,378 C828,384 838,385 848,386 C858,368 868,346 876,344 C898,308 922,275 946,263 C968,278 986,288 1002,296 C1040,332 1072,356 1100,378 C1100,436 1100,482 1100,526 C1112,546 1122,558 1128,568 C1134,588 1136,600 1136,610 C1134,638 1130,652 1128,666 C1124,710 1122,736 1120,758 C1114,768 1110,772 1106,772 C1096,768 1082,762 1061,753 C1050,744 1044,738 1044,736 C1018,716 1002,704 988,694 C968,680 956,672 946,666 C938,650 934,644 932,638 C918,618 910,606 904,596 C892,574 886,564 882,554 C872,532 866,520 862,512 C848,490 840,478 834,470 C824,454 818,448 814,442 C804,422 796,410 792,400 C786,380 784,368 784,358Z"
+      fill="url(#pf)" stroke="#8b1d1d" stroke-width="1.2" stroke-opacity="0.18"/>
+
+    <!-- Andes contour lines (N-S through western Peru) -->
+    <g fill="none" stroke="#8b1d1d" stroke-width="0.6" opacity="0.10">
+      <path d="M808,370 C812,420 820,480 835,540 C850,600 870,660 910,730"/>
+      <path d="M820,360 C825,410 835,470 850,530 C865,590 885,650 925,720"/>
+      <path d="M835,350 C842,400 852,460 868,520 C884,580 905,640 945,710"/>
+      <path d="M850,345 C858,395 870,455 888,515 C906,575 928,630 965,700"/>
+      <path d="M868,340 C878,390 892,450 910,510 C928,570 950,625 985,690"/>
+      <path d="M888,338 C900,386 916,444 936,504 C956,564 978,616 1010,676"/>
+      <path d="M908,336 C922,382 940,438 962,498 C984,558 1006,608 1035,666"/>
+      <path d="M930,334 C946,378 966,432 988,492 C1010,552 1032,600 1058,656"/>
+    </g>
+
+    <!-- River suggestions (subtle gray dashes) -->
+    <g fill="none" stroke="#6b7280" stroke-width="0.5" opacity="0.07" stroke-dasharray="4,3">
+      <path d="M870,340 C890,350 920,365 960,385 C1000,405 1040,410 1080,425"/>
+      <path d="M960,660 C970,620 990,580 1010,540 C1030,500 1060,460 1090,440"/>
+      <path d="M1080,425 C1088,430 1092,435 1090,440"/>
+    </g>
+
+    <!-- City markers -->
+    <g fill="#8b1d1d" opacity="0.14">
+      <circle cx="904" cy="596" r="3.5"/>
+      <text x="914" y="594" font-family="Arial,sans-serif" font-size="7.5" font-weight="600">Lima</text>
+      <circle cx="1050" cy="670" r="2.5"/>
+      <text x="1058" y="668" font-family="Arial,sans-serif" font-size="6.5">Cusco</text>
+      <circle cx="832" cy="462" r="2"/>
+      <text x="840" y="460" font-family="Arial,sans-serif" font-size="6">Chiclayo</text>
+      <circle cx="826" cy="432" r="2"/>
+      <text x="834" y="430" font-family="Arial,sans-serif" font-size="6">Piura</text>
+      <circle cx="1060" cy="730" r="2"/>
+      <text x="1068" y="728" font-family="Arial,sans-serif" font-size="6">Arequipa</text>
+      <circle cx="1120" cy="650" r="2"/>
+      <text x="1128" y="648" font-family="Arial,sans-serif" font-size="6">Pto. Maldonado</text>
+    </g>
+
+    <!-- Cadastral grid patches near Lima (VES, Chorrillos, SJM) -->
+    <g fill="none" stroke="#8b1d1d" stroke-width="0.3" opacity="0.06">
+      <rect x="889" y="584" width="8" height="6"/><rect x="897" y="584" width="8" height="6"/>
+      <rect x="905" y="584" width="8" height="6"/><rect x="889" y="590" width="8" height="6"/>
+      <rect x="897" y="590" width="8" height="6"/><rect x="905" y="590" width="8" height="6"/>
+      <rect x="889" y="596" width="8" height="6"/><rect x="897" y="596" width="8" height="6"/>
+      <rect x="905" y="596" width="8" height="6"/><rect x="889" y="602" width="8" height="6"/>
+      <rect x="897" y="602" width="8" height="6"/><rect x="905" y="602" width="8" height="6"/>
+      <rect x="913" y="584" width="8" height="6"/><rect x="913" y="590" width="8" height="6"/>
+      <rect x="913" y="596" width="8" height="6"/><rect x="913" y="602" width="8" height="6"/>
+    </g>
+
+    <!-- Lake Titicaca hint -->
+    <ellipse cx="1128" cy="690" rx="10" ry="6" fill="#6b7280" opacity="0.05" stroke="#6b7280" stroke-width="0.4" stroke-opacity="0.08"/>
+  </g>
+
+  <!-- ===== SURVEY CROSSHAIR MARKERS ===== -->
+  <g opacity="0.16">
+    <use href="#ch" x="194" y="194" width="12" height="12"/>
+    <use href="#ch" x="194" y="394" width="12" height="12"/>
+    <use href="#ch" x="194" y="594" width="12" height="12"/>
+    <use href="#ch" x="194" y="794" width="12" height="12"/>
+    <use href="#ch" x="194" y="994" width="12" height="12"/>
+    <use href="#ch" x="394" y="194" width="12" height="12"/>
+    <use href="#ch" x="394" y="394" width="12" height="12"/>
+    <use href="#ch" x="394" y="594" width="12" height="12"/>
+    <use href="#ch" x="394" y="794" width="12" height="12"/>
+    <use href="#ch" x="394" y="994" width="12" height="12"/>
+    <use href="#ch" x="1394" y="194" width="12" height="12"/>
+    <use href="#ch" x="1394" y="394" width="12" height="12"/>
+    <use href="#ch" x="1394" y="594" width="12" height="12"/>
+    <use href="#ch" x="1394" y="794" width="12" height="12"/>
+    <use href="#ch" x="1394" y="994" width="12" height="12"/>
+    <use href="#ch" x="1594" y="194" width="12" height="12"/>
+    <use href="#ch" x="1594" y="394" width="12" height="12"/>
+    <use href="#ch" x="1594" y="594" width="12" height="12"/>
+    <use href="#ch" x="1594" y="794" width="12" height="12"/>
+    <use href="#ch" x="1594" y="994" width="12" height="12"/>
+    <use href="#ch" x="1794" y="194" width="12" height="12"/>
+    <use href="#ch" x="1794" y="394" width="12" height="12"/>
+    <use href="#ch" x="1794" y="594" width="12" height="12"/>
+    <use href="#ch" x="1794" y="794" width="12" height="12"/>
+    <use href="#ch" x="1794" y="994" width="12" height="12"/>
+  </g>
+
+  <!-- ===== COORDINATE LABELS ===== -->
+  <g font-family="'Courier New',monospace" font-size="8" fill="#8b1d1d" opacity="0.07">
+    <!-- Top edge -->
+    <text x="200" y="14" text-anchor="middle">82°W</text>
+    <text x="400" y="14" text-anchor="middle">80°W</text>
+    <text x="600" y="14" text-anchor="middle">78°W</text>
+    <text x="800" y="14" text-anchor="middle">76°W</text>
+    <text x="1000" y="14" text-anchor="middle">74°W</text>
+    <text x="1200" y="14" text-anchor="middle">72°W</text>
+    <text x="1400" y="14" text-anchor="middle">70°W</text>
+    <text x="1600" y="14" text-anchor="middle">68°W</text>
+    <text x="1800" y="14" text-anchor="middle">66°W</text>
+    <!-- Bottom edge -->
+    <text x="200" y="1075" text-anchor="middle">82°W</text>
+    <text x="400" y="1075" text-anchor="middle">80°W</text>
+    <text x="600" y="1075" text-anchor="middle">78°W</text>
+    <text x="800" y="1075" text-anchor="middle">76°W</text>
+    <text x="1000" y="1075" text-anchor="middle">74°W</text>
+    <text x="1200" y="1075" text-anchor="middle">72°W</text>
+    <text x="1400" y="1075" text-anchor="middle">70°W</text>
+    <text x="1600" y="1075" text-anchor="middle">68°W</text>
+    <text x="1800" y="1075" text-anchor="middle">66°W</text>
+    <!-- Left edge -->
+    <text x="8" y="203">2°S</text>
+    <text x="8" y="403">6°S</text>
+    <text x="8" y="603">10°S</text>
+    <text x="8" y="803">14°S</text>
+    <text x="8" y="1003">18°S</text>
+    <!-- Right edge -->
+    <text x="1912" y="203" text-anchor="end">2°S</text>
+    <text x="1912" y="403" text-anchor="end">6°S</text>
+    <text x="1912" y="603" text-anchor="end">10°S</text>
+    <text x="1912" y="803" text-anchor="end">14°S</text>
+    <text x="1912" y="1003" text-anchor="end">18°S</text>
+  </g>
+
+  <!-- ===== COMPASS ROSE ===== -->
+  <g transform="translate(1780,120)" opacity="0.14">
+    <circle r="36" fill="none" stroke="#8b1d1d" stroke-width="0.8"/>
+    <circle r="30" fill="none" stroke="#8b1d1d" stroke-width="0.4"/>
+    <circle r="2" fill="#8b1d1d" opacity="0.5"/>
+    <!-- Cardinal ticks -->
+    <line x1="0" y1="-36" x2="0" y2="-28" stroke="#8b1d1d" stroke-width="1.2"/>
+    <line x1="36" y1="0" x2="28" y2="0" stroke="#8b1d1d" stroke-width="0.7"/>
+    <line x1="0" y1="36" x2="0" y2="28" stroke="#8b1d1d" stroke-width="0.7"/>
+    <line x1="-36" y1="0" x2="-28" y2="0" stroke="#8b1d1d" stroke-width="0.7"/>
+    <!-- Intercardinal ticks -->
+    <line x1="22" y1="-22" x2="25.5" y2="-25.5" stroke="#8b1d1d" stroke-width="0.4"/>
+    <line x1="22" y1="22" x2="25.5" y2="25.5" stroke="#8b1d1d" stroke-width="0.4"/>
+    <line x1="-22" y1="22" x2="-25.5" y2="25.5" stroke="#8b1d1d" stroke-width="0.4"/>
+    <line x1="-22" y1="-22" x2="-25.5" y2="-25.5" stroke="#8b1d1d" stroke-width="0.4"/>
+    <!-- North arrow -->
+    <polygon points="0,-28 -4.5,-18 0,-6 4.5,-18" fill="#8b1d1d" opacity="0.55"/>
+    <polygon points="0,28 -3.5,20 0,10 3.5,20" fill="none" stroke="#8b1d1d" stroke-width="0.5" opacity="0.35"/>
+    <!-- Labels -->
+    <text x="0" y="-42" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#8b1d1d">N</text>
+    <text x="44" y="4" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#8b1d1d">E</text>
+    <text x="0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#8b1d1d">S</text>
+    <text x="-44" y="4" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#8b1d1d">O</text>
+  </g>
+
+  <!-- ===== TITLE BLOCK (cartographic legend) ===== -->
+  <g transform="translate(1630,940)" opacity="0.09">
+    <rect width="255" height="90" fill="#f3f4f6" stroke="#8b1d1d" stroke-width="0.8" rx="2"/>
+    <line x1="0" y1="26" x2="255" y2="26" stroke="#8b1d1d" stroke-width="0.4"/>
+    <line x1="0" y1="52" x2="255" y2="52" stroke="#8b1d1d" stroke-width="0.4"/>
+    <text x="127" y="18" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#8b1d1d">CATASTRO URBANO — PERÚ</text>
+    <text x="127" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#8b1d1d">Sistema Geodésico WGS84</text>
+    <text x="127" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#8b1d1d">Proyección UTM Zona 18S</text>
+    <text x="127" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#8b1d1d">Escala referencial</text>
+    <text x="127" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#8b1d1d">1 : 100 000</text>
+  </g>
+
+  <!-- ===== SCALE BAR ===== -->
+  <g transform="translate(1650,1045)" opacity="0.09">
+    <rect x="0" y="0" width="50" height="5" fill="#8b1d1d"/>
+    <rect x="50" y="0" width="50" height="5" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
+    <rect x="100" y="0" width="50" height="5" fill="#8b1d1d"/>
+    <rect x="150" y="0" width="50" height="5" fill="none" stroke="#8b1d1d" stroke-width="0.5"/>
+    <text x="0" y="-3" font-family="Arial,sans-serif" font-size="6" fill="#8b1d1d" text-anchor="middle">0</text>
+    <text x="50" y="-3" font-family="Arial,sans-serif" font-size="6" fill="#8b1d1d" text-anchor="middle">50</text>
+    <text x="100" y="-3" font-family="Arial,sans-serif" font-size="6" fill="#8b1d1d" text-anchor="middle">100</text>
+    <text x="150" y="-3" font-family="Arial,sans-serif" font-size="6" fill="#8b1d1d" text-anchor="middle">150</text>
+    <text x="200" y="-3" font-family="Arial,sans-serif" font-size="6" fill="#8b1d1d" text-anchor="middle">200 km</text>
+  </g>
+
+  <!-- ===== CENTER CONTENT FADE ===== -->
+  <rect width="1920" height="1080" fill="url(#cf)"/>
+
+  <!-- ===== EDGE VIGNETTE ===== -->
+  <rect width="1920" height="1080" fill="url(#ev)"/>
+</svg>

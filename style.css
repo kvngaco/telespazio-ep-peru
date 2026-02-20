@@ -27,36 +27,16 @@ body {
 body {
   margin: 0;
   background-color: var(--bg-base);
+  background-image: url("img/bg-cartografia.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.35;
   font-size: 16px;
   position: relative;
-}
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 420px;
-  z-index: 0;
-  pointer-events: none;
-  background-image: url("https://www.idep.gob.pe/geoportal/rest/services/IMAGENES/ORTOFOTO_MACHU_PICHU/MapServer/export?bbox=-6511494.216171516,-8884263.54573214,-6506007.80281253,-8880230.203876216&bboxSR=3857&imageSR=3857&size=1920,1080&format=jpg&f=image");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.95;
-}
-
-body::before {
-  left: 0;
-  background-position: left center;
-}
-
-body::after {
-  right: 0;
-  background-position: right center;
 }
 
 .site-header,
@@ -394,12 +374,6 @@ body::after {
   .maps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  body::before,
-  body::after {
-    width: 300px;
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 600px) {
@@ -420,8 +394,4 @@ body::after {
     height: 220px;
   }
 
-  body::before,
-  body::after {
-    display: none;
-  }
 }
